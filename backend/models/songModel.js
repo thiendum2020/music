@@ -12,7 +12,7 @@ const songSchema = new mongoose.Schema({
     image: { type: String, required: true },
     duration: { type: String, required: true },
     genre: { type: String, required: true },
-    pushlished: { type: Boolean, default: true },
+    published: { type: Boolean, default: true },
     createdBy: { type: ObjectId, ref: "User", required: true },
     createdAt: { type: Date, default: Date.now },
 });

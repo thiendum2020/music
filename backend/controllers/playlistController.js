@@ -74,13 +74,16 @@ exports.addSongToPlaylist = async (req, res) => {
     if (error) return res.status(400).send({ message: error.details[0].message });
 
     const user = await User.findById(req.user._id);
+    const playlist = await PlayList.findById(req.body.playlistId);
+
+    if (!playlist) return res.status(404).send({ message: "The playlist not found" });
     if (!user._id.equals(playlist.user)) return res.status(403).send({ message: "User don't have access to add!" });
 
     const song = await Song.findById(req.body.songId);
     if (!song) return res.status(404).send({ message: "The song not found" });
 
-    const playlist = await PlayList.findById(req.body.playlistId);
-    if (!playlist) return res.status(404).send({ message: "The playlist not found" });
+    const isSong = playlist.songs.find((song) => song === req.body.songId);
+    if (isSong) return res.status(403).send({ message: "The song added to the playlist" });
 
     if (playlist.songs.indexOf(req.body.songId) === -1) {
         playlist.songs.push(req.body.songId);
@@ -94,7 +97,7 @@ exports.addSongToPlaylist = async (req, res) => {
 };
 
 // Remove song from playlist        PUT/api/playlists/song/remove
-exports.createSong = async (req, res) => {
+exports.removeSongFromPlaylist = async (req, res) => {
     const schema = Joi.object({
         playlistId: Joi.string().required(),
         songId: Joi.string().required(),
@@ -103,13 +106,16 @@ exports.createSong = async (req, res) => {
     if (error) return res.status(400).send({ message: error.details[0].message });
 
     const user = await User.findById(req.user._id);
-    if (!user._id.equals(playlist.user)) return res.status(403).send({ message: "User don't have access to Remove!" });
+    const playlist = await PlayList.findById(req.body.playlistId);
+
+    if (!playlist) return res.status(404).send({ message: "The playlist not found" });
+    if (!user._id.equals(playlist.user)) return res.status(403).send({ message: "User don't have access to add!" });
 
     const song = await Song.findById(req.body.songId);
     if (!song) return res.status(404).send({ message: "The song not found" });
 
-    const playlist = await PlayList.findById(req.body.playlistId);
-    if (!playlist) return res.status(404).send({ message: "The playlist not found" });
+    const isSong = playlist.songs.find((song) => song === req.body.songId);
+    if (!isSong) return res.status(403).send({ message: "The song does not exist in the playlist" });
 
     const index = playlist.songs.indexOf(req.body.songId);
     playlist.songs.splice(index, 1);
@@ -138,7 +144,7 @@ exports.getAllPlaylistsByUserID = async (req, res) => {
 // };
 
 // Delete playlist by id        DELETE/api/playlists/:id
-exports.deletePlaylist = async (req, res) => {
+exports.deletePlaylistByID = async (req, res) => {
     const user = await User.findById(req.user._id);
     const playlist = await PlayList.findById(req.params.id);
     if (!user._id.equals(playlist.user)) return res.status(403).send({ message: "User don't have access to delete!" });

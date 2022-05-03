@@ -13,6 +13,8 @@ exports.getAllArtists = async (req, res) => {
 // Get artist by id       GET/api/artists/:id
 exports.getArtistByID = async (req, res) => {
     const artist = await Artist.findById(req.params.id);
+    if (!artist) return res.status(404).send({ message: "Artist not found" });
+
     const songsBySinger = await Song.find({ singer: artist._id });
     const songsByComposer = await Song.find({ composer: artist._id });
     res.status(200).send({
@@ -39,15 +41,33 @@ exports.createArtist = async (req, res) => {
 
 // Update artist by id        PUT/api/artists/:id
 exports.updateArtistByID = async (req, res) => {
-    const user = await Artist.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true });
+    const artist = await Artist.findByIdAndUpdate(req.params.id, { $set: req.body }, { new: true });
     res.status(200).send({
-        data: user,
+        data: artist,
         message: "Artist profile updated successfully",
     });
 };
 
 // Delete artist by id        DELETE/api/artists/:id
 exports.deleteArtistByID = async (req, res) => {
-    await User.findByIdAndDelete(req.params.id);
+    await Artist.findByIdAndDelete(req.params.id);
     res.status(200).send({ message: "Artist deleted successfully" });
+};
+
+// Get all singers        GET/api/artists/singer/getAll
+exports.getAllSingers = async (req, res) => {
+    const singers = await Artist.find({isSinger: true});
+    res.status(200).send({
+        data: singers,
+        message: "Get all singers successfully",
+    });
+};
+
+// Get all composers        GET/api/artists/composer/getAll
+exports.getAllComposers = async (req, res) => {
+    const composers = await Artist.find({isComposer: true});
+    res.status(200).send({
+        data: composers,
+        message: "Get all composers successfully",
+    });
 };
