@@ -5,7 +5,7 @@ const artistSchema = new mongoose.Schema({
     name: { type: String, required: true },
     gender: { type: String, required: true },
     isSinger: { type: Boolean, required: true, default: true },
-    isomposer: { type: Boolean, required: true, default: false },
+    isComposer: { type: Boolean, required: true, default: false },
     image: { type: String, required: true },
 	date: { type: String, required: true },
     month: { type: String, required: true },

@@ -1,7 +1,7 @@
 const { User } = require("../models/userModel");
 const { Song, validate } = require("../models/songModel");
 
-// Create song
+// Create song      POST/api/songs
 exports.createSong = async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send({ message: error.details[0].message });
@@ -13,7 +13,7 @@ exports.createSong = async (req, res) => {
     });
 };
 
-// Get all songs by Admin
+// Get all songs by Admin      GET/api/songs/by-admin/get
 exports.getAllSongsByAdmin = async (req, res) => {
     const songs = await Song.find();
     res.status(200).send({
@@ -22,7 +22,7 @@ exports.getAllSongsByAdmin = async (req, res) => {
     });
 };
 
-// Get all songs pushlished
+// Get all songs pushlished      GET/api/songs/pushlished/get
 exports.getAllSongsPublished = async (req, res) => {
     const songs = await Song.find({ pushlished: true });
     res.status(200).send({
@@ -31,7 +31,7 @@ exports.getAllSongsPublished = async (req, res) => {
     });
 };
 
-// Get 1 song by id
+// Get 1 song by id      GET/api/songs/:id
 exports.getAllSongs = async (req, res) => {
     const song = await Song.findById(req.params.id);
     res.status(200).send({
@@ -40,7 +40,7 @@ exports.getAllSongs = async (req, res) => {
     });
 };
 
-// Update song
+// Update song      PUT/api/songs/:id
 exports.updateSongByID = async (req, res) => {
     const song = await Song.findByIdAndUpdate(req.params.id, req.body, {
         new: true,
@@ -51,13 +51,13 @@ exports.updateSongByID = async (req, res) => {
     });
 };
 
-// Delete song by ID
+// Delete song by ID      DELETE/api/songs/:id
 exports.deleteSongByID = async (req, res) => {
     await Song.findByIdAndDelete(req.params.id);
     res.status(200).send({ message: "The song deleted sucessfully" });
 };
 
-// Favorite song
+// Favorite song      PUT/api/songs/favourite/:id
 exports.favoriteSong = async (req, res) => {
     let resMessage = "";
     const song = await Song.findById(req.params.id);
@@ -78,7 +78,7 @@ exports.favoriteSong = async (req, res) => {
     res.status(200).send({ message: resMessage });
 };
 
-// Get favourite songs
+// Get favourite songs      GET/api/songs/favourite/get
 exports.getFavouriteSongs = async (req, res) => {
     const user = await User.findById(req.user._id);
     const songs = await Song.find({ _id: user.favourites });

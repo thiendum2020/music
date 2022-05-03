@@ -1,5 +1,5 @@
 const { User, validate } = require("../models/userModel");
-const bcrypt = require("bcrypt");
+// const bcrypt = require("bcrypt");
 
 // Get all users        GET/api/users
 exports.getAllUsers = async (req, res) => {
@@ -15,7 +15,7 @@ exports.getUserByID = async (req, res) => {
     const user = await User.findById(req.params.id).select("-password -__v");
     res.status(200).send({
         data: user,
-        message: "Get User By ID successfully",
+        message: "Get user by id successfully",
     });
 };
 
@@ -26,7 +26,7 @@ exports.updateUserByID = async (req, res) => {
     );
     res.status(200).send({
         data: user,
-        message: "Profile updated successfully",
+        message: "User profile updated successfully",
     });
 };
 
