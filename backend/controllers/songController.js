@@ -22,18 +22,19 @@ exports.getAllSongsByAdmin = async (req, res) => {
     });
 };
 
-// Get all songs pushlished      GET/api/songs/pushlished/get
+// Get all songs published      GET/api/songs/published/get
 exports.getAllSongsPublished = async (req, res) => {
-    const songs = await Song.find({ pushlished: true });
+    const songs = await Song.find({ published: true });
     res.status(200).send({
         data: songs,
-        message: "Get all songs pushlished successfully",
+        message: "Get all songs published successfully",
     });
 };
 
 // Get 1 song by id      GET/api/songs/:id
-exports.getAllSongs = async (req, res) => {
+exports.getSongByID = async (req, res) => {
     const song = await Song.findById(req.params.id);
+    if (!song) return res.status(404).send({ message: "The song not found" });
     res.status(200).send({
         data: song,
         message: "Get the song successfully",

@@ -13,6 +13,8 @@ exports.getAllUsers = async (req, res) => {
 // Get user by id       GET/api/users/:id
 exports.getUserByID = async (req, res) => {
     const user = await User.findById(req.params.id).select("-password -__v");
+    if (!user) return res.status(404).send({ message: "User not found" });
+
     res.status(200).send({
         data: user,
         message: "Get user by id successfully",
