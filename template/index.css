@@ -1,0 +1,222 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(img/background.jpg) no-repeat center;
+    background-size: cover;
+    filter: grayscale(100);
+    z-index: -1;
+    color: white;
+}
+
+.menu-left {
+    width: 280px;
+    height: 100%;
+    min-height: 100vh;
+    background: rgba(34, 34, 34, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 25px 20px;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #f1f1f1;
+}
+
+.logo-container .logo {
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    list-style: none;
+}
+
+.menu-container {
+    margin: 50px 0;
+}
+
+.menu-container p {
+    color: #848484;
+    font-size: 12px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.menu-container ul {
+    width: 100%;
+    padding: 0px;
+}
+
+.menu-container ul li {
+    list-style: none;
+    margin: 5px 0;
+    width: 100%;
+    padding: 5px 0px;
+    position: relative;
+    display: flex;
+}
+
+.menu-container ul li a {
+    text-decoration: none;
+    color: #848484;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+}
+
+.menu-container ul li a i {
+    font-size: 18px;
+    margin-right: 15px;
+}
+
+.menu-container ul li:hover a,
+.menu-container ul li.active a {
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+
+.menu-container ul li::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: -15px;
+    width: 0px;
+    height: 100%;
+    background: #49e12e;
+    border-radius: 5px;
+}
+
+.menu-container ul li:hover::before,
+.menu-container ul li.active::before {
+    width: 5px;
+    transition: width 0.5s;
+}
+
+.playlist {
+    margin: 15px 0px;
+    cursor: pointer;
+
+}
+
+.playlist .playlist-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #848484;
+    margin-bottom: 10px;
+    font-size: 12px;
+} 
+
+.playlist .playlist-name i {
+    font-size:16px;
+    color: #f1f1f1;
+} 
+
+.playlist .playlist-scroll {
+    height: 155px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+}
+
+.playlist .playlist-scroll .playlist-item {
+    display: flex;
+    align-items: center;
+    color: #848484;
+    margin: 10px 0;
+}
+
+.playlist .playlist-scroll .playlist-item:hover {
+    color: #f1f1f1;
+    transition: all 0.3s;
+}
+
+.playlist .playlist-scroll .playlist-item p {
+    font-size: 16px;
+    margin-left: 15px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline;
+}
+.playlist .playlist-scroll .playlist-item i {
+    font-size: 20px;
+}
+.playlist .playlist-scroll .playlist-item .bx-trash {
+    margin-left: auto;
+}
+/* 
+.tracklist {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin-top: 40px;
+}
+.tracklist .playingsong {
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.tracklist .playingsong img {
+    width: 50px !important;
+}
+
+.tracklist .playingsong p {
+    margin-left: 15px;
+    color: #f1f1f1;
+    font-size: 14px;
+}
+.tracklist .playingsong span {
+    display: block;
+    font-size: 12px;
+    color: #848484;
+}
+.tracklist .volume {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    color: #848484;
+}
+.tracklist .volume i {
+    font-size:25px;
+    margin-left: 2px;
+} */
