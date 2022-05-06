@@ -6,9 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Template MUSIC WEBSITE</title>
         <link rel="stylesheet" href="./index.css" />
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"
+        />
         <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
-        <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+        <link
+            href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+            rel="stylesheet"
+        />
     </head>
     <body>
         <div class="app">
@@ -26,26 +32,41 @@
                         <p>MENU</p>
                         <ul>
                             <li class="active">
-                                <a href=""> <i class="bx bxs-home"></i> <span>Home</span> </a>
+                                <a href="">
+                                    <i class="bx bxs-home"></i>
+                                    <span>Home</span>
+                                </a>
                             </li>
                             <li>
-                                <a href=""><i class="bx bxs-microphone-alt"></i><span>Artist</span> </a>
+                                <a href=""
+                                    ><i class="bx bxs-microphone-alt"></i
+                                    ><span>Artist</span>
+                                </a>
                             </li>
                             <li>
-                                <a href=""><i class="bx bxs-album"></i><span>Albums</span> </a>
+                                <a href=""
+                                    ><i class="bx bxs-album"></i
+                                    ><span>Albums</span>
+                                </a>
                             </li>
                             <li>
-                                <a href=""><i class="bx bxs-heart"></i><span>Favorite</span> </a>
+                                <a href=""
+                                    ><i class="bx bxs-heart"></i
+                                    ><span>Favorite Songs</span>
+                                </a>
                             </li>
                             <li>
-                                <a href=""><i class="bx bx-podcast"></i><span>Podcast</span> </a>
+                                <a href=""
+                                    ><i class="bx bx-podcast"></i
+                                    ><span>Podcasts</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
 
                     <div class="playlist">
                         <div class="playlist-name">
-                            <p>PLAYLIST</p>
+                            <p>PLAYLISTS</p>
                             <i class="bx bx-plus-medical"></i>
                         </div>
                         <div class="playlist-scroll">
@@ -109,13 +130,41 @@
                                 <p>Hip Pop</p>
                                 <i class="bx bx-trash"></i>
                             </div>
+                            <div class="playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Tiktok Remix</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Tiktok Remix</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Songs For Kids</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Guitar Top Hits</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Relaxing Music</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Hip Pop</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="main-content">
-                    
-                </div>
+                <div class="main-content"></div>
             </div>
             <div class="footer-container music-player">
                 <div class="music-player-left">
@@ -128,14 +177,147 @@
                     <div class="music-details">
                         <p>Nơi tình yêu bắt đầu</p>
                         <span>Bùi Anh Tuấn</span>
-                        <a href="" class="action-heart heart-active">
-                            <i class="bx bxs-heart"></i>
-                        </a>
                     </div>
                 </div>
                 <div class="music-player-center">
                     <div class="music-player-controll">
-                        <input type="range" class="progressBar" value="0" max="100" style="--played-width: 0%" />
+                        <div class="controll-top">
+                            <div class="left">
+                                <a href="" class="action-heart">
+                                    <i class="bx bxs-heart"></i>
+                                </a>
+                                <i class="action-download">
+                                    <svg
+                                        stroke="currentColor"
+                                        fill="currentColor"
+                                        stroke-width="0"
+                                        viewBox="0 0 16 16"
+                                        height="1em"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                                        ></path>
+                                        <path
+                                            d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
+                                        ></path>
+                                    </svg>
+                                </i>
+                            </div>
+                            <div class="middle">
+                                <div class="back">
+                                    <i>
+                                        <svg
+                                            stroke="currentColor"
+                                            fill="currentColor"
+                                            stroke-width="0"
+                                            viewBox="0 0 448 512"
+                                            height="1em"
+                                            width="1em"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M64 468V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12v176.4l195.5-181C352.1 22.3 384 36.6 384 64v384c0 27.4-31.9 41.7-52.5 24.6L136 292.7V468c0 6.6-5.4 12-12 12H76c-6.6 0-12-5.4-12-12z"
+                                            ></path>
+                                        </svg>
+                                    </i>
+
+                                    <i>
+                                        <svg
+                                            stroke="currentColor"
+                                            fill="currentColor"
+                                            stroke-width="0"
+                                            viewBox="0 0 512 512"
+                                            height="1em"
+                                            width="1em"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M11.5 280.6l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2zm256 0l192 160c20.6 17.2 52.5 2.8 52.5-24.6V96c0-27.4-31.9-41.8-52.5-24.6l-192 160c-15.3 12.8-15.3 36.4 0 49.2z"
+                                            ></path>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="playPause">
+                                    <i
+                                        ><svg
+                                            stroke="currentColor"
+                                            fill="currentColor"
+                                            stroke-width="0"
+                                            viewBox="0 0 448 512"
+                                            height="1em"
+                                            width="1em"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+                                            ></path>
+                                        </svg>
+                                    </i>
+                                </div>
+                                <div class="forward">
+                                    <i>
+                                        <svg
+                                            stroke="currentColor"
+                                            fill="currentColor"
+                                            stroke-width="0"
+                                            viewBox="0 0 512 512"
+                                            height="1em"
+                                            width="1em"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M500.5 231.4l-192-160C287.9 54.3 256 68.6 256 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2zm-256 0l-192-160C31.9 54.3 0 68.6 0 96v320c0 27.4 31.9 41.8 52.5 24.6l192-160c15.3-12.8 15.3-36.4 0-49.2z"
+                                            ></path>
+                                        </svg>
+                                    </i>
+                                    <i>
+                                        <svg
+                                            stroke="currentColor"
+                                            fill="currentColor"
+                                            stroke-width="0"
+                                            viewBox="0 0 448 512"
+                                            height="1em"
+                                            width="1em"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M384 44v424c0 6.6-5.4 12-12 12h-48c-6.6 0-12-5.4-12-12V291.6l-195.5 181C95.9 489.7 64 475.4 64 448V64c0-27.4 31.9-41.7 52.5-24.6L312 219.3V44c0-6.6 5.4-12 12-12h48c6.6 0 12 5.4 12 12z"
+                                            ></path>
+                                        </svg>
+                                    </i>
+                                </div>
+                            </div>
+                            <div class="right">
+                                <i
+                                    ><svg
+                                        stroke="currentColor"
+                                        fill="currentColor"
+                                        stroke-width="0"
+                                        viewBox="0 0 448 512"
+                                        height="1em"
+                                        width="1em"
+                                        xmlns="http://www.w3.org/2000/svg"
+                                    >
+                                        <path
+                                            d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"
+                                        ></path>
+                                    </svg>
+                                </i>
+                            </div>
+                        </div>
+                        <div class="controll-bottom">
+                            <div class="current-time">00:30</div>
+                            <input
+                                type="range"
+                                class="progress-bar"
+                                value="0"
+                                max="25"
+                                style="--played-width: 50%"
+                            />
+                            <div class="duration">01:00</div>
+                        </div>
                     </div>
                 </div>
                 <div class="music-player-right"></div>
