@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Template MUSIC WEBSITE</title>
+        <link rel="stylesheet" href="./main.css" />
+        <link rel="stylesheet" href="./song.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+        <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+        <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
+    </head>
+    <body>
+        <div class="app">
+            <div class="background"></div>
+            <!-- main content -->
+            <div class="main-content">
+                <!-- left container -->
+                <div class="left-container">
+                    <!-- logo -->
+                    <div class="left-container__logo">
+                        <h3>TV Music</h3>
+                    </div>
+                    <!-- left menu -->
+                    <div class="left-container__menu">
+                        <p>MENU</p>
+                        <ul>
+                            <li class="left-container__home">
+                                <a href="./home.html">
+                                    <i class="bx bx-home icon-none"></i>
+                                    <i class="bx bxs-home icon-active"></i>
+                                    <span>Home</span>
+                                </a>
+                            </li>
+                            <li class="left-container__song active">
+                                <a href="#">
+                                    <i class='bx bx-music icon-none'></i>
+                                    <i class='bx bxs-music icon-active'></i>
+                                    <span>Song</span>
+                                </a>
+                            </li>
+                            <li class="left-container__artist">
+                                <a href="">
+                                    <i class="bx bx-microphone icon-none"></i>
+                                    <i class="bx bxs-microphone-alt icon-active"></i>
+                                    <span>Artist</span>
+                                </a>
+                            </li>
+                            <!-- <li class="left-container__albums">
+                                <a href="">
+                                    <i class="bx bx-album icon-none"></i>
+                                    <i class="bx bxs-album icon-active"></i>
+                                    <span>Albums</span>
+                                </a>
+                            </li> -->
+                            <li class="left-container__favourite">
+                                <a href="">
+                                    <i class="bx bx-heart icon-none"></i>
+                                    <i class="bx bxs-heart icon-active"></i>
+                                    <span>Favorite Songs</span>
+                                </a>
+                            </li>
+                            <li class="left-container__search">
+                                <a href="">
+                                    <i class="bx bx-search icon-none"></i>
+                                    <i class="bx bxs-search icon-active"></i>
+                                    <span>Search</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- playlist -->
+                    <div class="left-container__playlist">
+                        <div class="left-container__playlist-header">
+                            <p>PLAYLISTS</p>
+                            <i class="bx bx-plus-medical"></i>
+                        </div>
+                        <div class="left-container__playlist-scroll">
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Tiktok Remix</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Tiktok Remix</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Songs For Kids</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Guitar Top Hits</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Relaxing Music</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Hip Pop</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Tiktok Remix</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Tiktok Remix</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Songs For Kids</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Guitar Top Hits</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Relaxing Music</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Hip Pop</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Tiktok Remix</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Tiktok Remix</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Songs For Kids</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Guitar Top Hits</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Relaxing Music</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                            <div class="left-container__playlist-item">
+                                <i class="bx bxs-playlist"></i>
+                                <p>Hip Pop</p>
+                                <i class="bx bx-trash"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- home container -->
+                <div class="home-container">
+                    <!-- home container header -->
+                    <div class="home-container__header">
+                        <div class="home-container__breadcrumb">
+                            <ul>
+                                <li><a href="#">Song</a></li>
+                                <li>All Songs</li>
+                            </ul>
+                        </div>
+                        <div class="home-container__user-login">
+                            <p>
+                                <span>Hi, </span>
+                                <a class="user-login__tooltip" href="">
+                                    Thùy Vy
+                                    <span class="user-login__tooltip-text">See my profile</span>
+                                </a>
+                            </p>
+                            <span>Logout</span>
+                        </div>
+                    </div>
+                    <!-- home container center -->
+                    <div class="home-container__center">
+                        <!-- <div class="home-container__popular-songs">
+                            <div class="home-container__title">
+                                <p>Popular songs</p>
+                                <div class="home-container__see-more">
+                                    <a href="#">See more -></a>
+                                </div>
+                            </div>
+                            <div class="home-container__list-items">
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-container__popular-playlists">
+                            <div class="home-container__title">
+                                <p>Popular playlists</p>
+                                <div class="home-container__see-more">
+                                    <a href="#">See more -></a>
+                                </div>
+                            </div>
+                            <div class="home-container__list-items">
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span>Lorem ipsum dolor sit</span>
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-container__popular-artists">
+                            <div class="home-container__title">
+                                <p>Popular artists</p>
+                                <div class="home-container__see-more">
+                                    <a href="#">See more -></a>
+                                </div>
+                            </div>
+                            <div class="home-container__list-items">
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                                <div class="home-container__item">
+                                    <div class="home-container__item-image">
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt=""
+                                        />
+                                    </div>
+                                    <div class="home-container__item-content">
+                                        <p>Ronaldo</p>
+                                        <span
+                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.</span
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- footer content -->
+            <div class="footer-content">
+                <div class="music-player">
+                    <!-- music-player left -->
+                    <div class="music-player__left">
+                        <div class="music-player__img">
+                            <img
+                                src="https://vnn-imgs-f.vgcloud.vn/2020/11/25/08/bui-anh-tuan-cover-love-song-tang-sinh-nhat-thay-ho-ngoc-ha.jpg"
+                                alt="THERE'S NO ONE AT ALL"
+                            />
+                        </div>
+                        <div class="music-player__details">
+                            <p>Nơi tình yêu bắt đầu</p>
+                            <span>Bùi Anh Tuấn</span>
+                        </div>
+                    </div>
+                    <!-- music-player center -->
+                    <div class="music-player__center">
+                        <div class="music-player__controll">
+                            <div class="music-player__controll-top">
+                                <!-- controll-top  left-section -->
+                                <div class="controll-top__left-section">
+                                    <div class="controll-top__action-heart active">
+                                        <i class="bx bxs-heart"></i>
+                                    </div>
+                                    <div class="controll-top__action-download">
+                                        <i>
+                                            <svg
+                                                stroke="currentColor"
+                                                fill="currentColor"
+                                                stroke-width="0"
+                                                viewBox="0 0 16 16"
+                                                height="1em"
+                                                width="1em"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"
+                                                ></path>
+                                                <path
+                                                    d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"
+                                                ></path>
+                                            </svg>
+                                        </i>
+                                    </div>
+                                </div>
+                                <!-- controll-top  middle-section -->
+                                <div class="controll-top__middle-section">
+                                    <div class="controll-top__action-repeat">
+                                        <i class="fa fa-repeat" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="controll-top__action-previous">
+                                        <i class="fa fa-step-backward" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="controll-top__action-play">
+                                        <i class="fa fa-play-circle" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="controll-top__action-forward">
+                                        <i class="fa fa-step-forward" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="controll-top__action-random">
+                                        <i class="fa fa-random" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <!-- controll-top  right-section -->
+                                <div class="controll-top__right-section">
+                                    <i>
+                                        <svg
+                                            stroke="currentColor"
+                                            fill="currentColor"
+                                            stroke-width="0"
+                                            viewBox="0 0 448 512"
+                                            height="1em"
+                                            width="1em"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z"
+                                            ></path>
+                                        </svg>
+                                    </i>
+                                </div>
+                            </div>
+                            <!-- music-player controll-bottom -->
+                            <div class="music-player__controll-bottom">
+                                <div class="music-player__current-time">00:30</div>
+                                <input
+                                    type="range"
+                                    class="music-player__progress-bar"
+                                    value="0"
+                                    max="25"
+                                    style="--played-width: 50%"
+                                />
+                                <div class="music-player__duration">01:00</div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- music-player center -->
+                    <div class="music-player__right">
+                        <div class="music-player__volume-duration">
+                            <input
+                                type="range"
+                                class="music-player__volume-bar"
+                                value="75"
+                                max="100"
+                                style="--played-width: 75%"
+                            />
+                        </div>
+                        <a class="music-player__btn-volume">
+                            <i class="bx bx-volume-full"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
