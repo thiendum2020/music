@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Template MUSIC WEBSITE</title>
         <link rel="stylesheet" href="./main.css" />
-        <link rel="stylesheet" href="./home.css" />
+        <link rel="stylesheet" href="./artist.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
         <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
         <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css" rel="stylesheet" />
@@ -26,8 +26,8 @@
                     <div class="left-container__menu">
                         <p>MENU</p>
                         <ul>
-                            <li class="left-container__home active">
-                                <a href="#">
+                            <li class="left-container__home">
+                                <a href="./home.html">
                                     <i class="bx bx-home icon-none"></i>
                                     <i class="bx bxs-home icon-active"></i>
                                     <span>Home</span>
@@ -35,12 +35,12 @@
                             </li>
                             <li class="left-container__song">
                                 <a href="./song.html">
-                                    <i class='bx bx-music icon-none'></i>
-                                    <i class='bx bxs-music icon-active'></i>
+                                    <i class="bx bx-music icon-none"></i>
+                                    <i class="bx bxs-music icon-active"></i>
                                     <span>Song</span>
                                 </a>
                             </li>
-                            <li class="left-container__artist">
+                            <li class="left-container__artist active">
                                 <a href="./artist.html">
                                     <i class="bx bx-microphone icon-none"></i>
                                     <i class="bx bxs-microphone-alt icon-active"></i>
@@ -176,13 +176,13 @@
                     <div class="home-container__header">
                         <div class="home-container__breadcrumb">
                             <ul>
-                                <li><a href="#">Home</a></li>
-                                <!-- <li>Popular Songs</li> -->
+                                <li><a href="./artist.html">Artist</a></li>
+                                <li>Bùi Anh Tuấn</li>
                             </ul>
                         </div>
                         <div class="home-container__user-login">
                             <a class="user-login__image" href="#">
-                                <img src="./img/avatar.jpg" alt="">
+                                <img src="./img/avatar.jpg" alt="" />
                             </a>
                             <div>
                                 <p>
@@ -198,251 +198,34 @@
                     </div>
                     <!-- home container center -->
                     <div class="home-container__center">
-                        <div class="home-container__popular-songs">
-                            <div class="home-container__title">
-                                <p>Popular songs</p>
-                                <div class="home-container__see-more">
-                                    <a href="./song.html">See more -></a>
+                        <div class="home-container__artist-intro">
+                            <div class="home-container__desc">
+                                <div class="artist-intro__image">
+                                    <img
+                                        src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg"
+                                        alt=""
+                                    />
                                 </div>
-                            </div>
-                            <div class="home-container__list-items">
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
+                                <div class="artist-intro__text">
+                                    <div class="artist-intro__name">
+                                        <h1>Bùi Anh Tuấn</h1>
+                                        <img src="./img/check.png" alt="" />
                                     </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
+                                    <span>(09/09/1991)</span>
+                                    <div class="artist-intro__follow">
+                                        <p>1000 followers</p>
+                                        <button class="artist-intro__btn-follow">
+                                            + Follow
+                                        </button>
+                                        <!-- <button class="artist-intro__btn-follow">
+                                            Following
+                                        </button> -->
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="home-container__popular-playlists">
-                            <div class="home-container__title">
-                                <p>Popular playlists</p>
-                                <div class="home-container__see-more">
-                                    <a href="#">See more -></a>
-                                </div>
-                            </div>
-                            <div class="home-container__list-items">
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span>Lorem ipsum dolor sit</span>
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="home-container__popular-artists">
-                            <div class="home-container__title">
-                                <p>Popular artists</p>
-                                <div class="home-container__see-more">
-                                    <a href="./artist.html">See more -></a>
-                                </div>
-                            </div>
-                            <div class="home-container__list-items">
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                                <div class="home-container__item">
-                                    <div class="home-container__item-image">
-                                        <img
-                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
-                                            alt=""
-                                        />
-                                    </div>
-                                    <div class="home-container__item-content">
-                                        <p>Ronaldo</p>
-                                        <span
-                                            >Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span
-                                        >
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="home-container__artist-list-songs">
+                            
                         </div>
                     </div>
                 </div>

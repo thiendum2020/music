@@ -182,10 +182,7 @@
                         </div>
                         <div class="home-container__user-login">
                             <a class="user-login__image" href="#">
-                                <img
-                                    src="https://baoquocte.vn/stores/news_dataimages/phamthuan/022022/26/16/lo-ngai-it-co-co-hoi-gianh-danh-hieu-ronaldo-co-kha-nang-roi-man-utd.jpg?rt=20220226165204"
-                                    alt=""
-                                />
+                                <img src="./img/avatar.jpg" alt="" />
                             </a>
                             <div>
                                 <p>
@@ -201,52 +198,274 @@
                     </div>
                     <!-- home container center -->
                     <div class="home-container__center">
-                        <table class="home-container__table">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th>Album</th>
-                                    <th>Date</th>
-                                    <th>Time</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        there's not one at all
-                                        <!-- <div class="home-container__item">
-                                        <div class="home-container__item-image">
-                                            <img
-                                                src="https://cdnmedia.thethaovanhoa.vn/Upload/XmJnTp3BYsa9r8REW2g/files/2022/04/sontung/mv-moi-son-tung-m-tp-nb.jpg"
-                                                alt=""
-                                            />
-                                        </div>
-                                        <div class="home-container__item-content">
-                                            <p>there's not one at all</p>
-                                            <span
-                                                >Son Tung M-TP</span
-                                            >
-                                        </div>
-                                    </div> -->
-                                    </td>
-                                    <td>there's not one at all</td>
-                                    <td>1/1/2022</td>
-                                    <td>2:22</td>
-                                </tr>
-                                <tr class="active-row">
-                                    <td>there's not one at all</td>
-                                    <td>there's not one at all</td>
-                                    <td>1/1/2022</td>
-                                    <td>2:22</td>
-                                </tr>
-                                <tr>
-                                    <td>there's not one at all</td>
-                                    <td>there's not one at all</td>
-                                    <td>1/1/2022</td>
-                                    <td>2:22</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div class="home-contaier__grid-table">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th style="width: 100px; text-align: center">#</th>
+                                        <th style="width: 700px">Name</th>
+                                        <th>Genre</th>
+                                        <th>Date</th>
+                                        <th>Time</th>
+                                        <th style="width: 100px"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="song-item playing">
+                                        <td style="text-align: center">
+                                            <span>1</span>
+                                            <!-- <i class="bx bx-play song-item__btn-play-pause"></i> -->
+                                            <i class='bx bx-pause song-item__btn-play-pause'></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>Nơi tình yêu bắt đầu</p>
+                                                <p><a href="./artist-details.html">Bùi Anh Tuấn</a></p>
+                                            </div>
+                                        </td>
+                                        <td>Ballad</td>
+                                        <td>1/1/2022</td>
+                                        <td>4:22</td>
+                                        <td class="song-item__action">
+                                            <!-- <i class="bx bx-heart"></i> -->
+                                            <i class="bx bxs-heart icon__heart--active"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>2</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Ballad</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>3</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Rap</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>4</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Pop</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>5</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Ballad</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>6</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Rap</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>7</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Pop</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>8</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Ballad</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>9</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Rap</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                    <tr class="song-item">
+                                        <td style="text-align: center">
+                                            <span>10</span>
+                                            <i class="bx bx-play song-item__btn-play-pause"></i>
+                                        </td>
+                                        <td class="song-item__details">
+                                            <div class="song-item__image">
+                                                <img
+                                                    src="https://static-images.vnncdn.net/files/publish/theres-no-one-at-all-ra-mat-tu-284-da-gay-phan-ung-du-doi-6c2f328e52de4ced95f347db6667f6d4.jpg"
+                                                    alt=""
+                                                />
+                                            </div>
+                                            <div class="song-item__text">
+                                                <p>There's not one at all</p>
+                                                <p>Sơn Tùng M-TP</p>
+                                            </div>
+                                        </td>
+                                        <td>Rap</td>
+                                        <td>1/1/2022</td>
+                                        <td>2:22</td>
+                                        <td class="song-item__action">
+                                            <i class="bx bx-heart"></i>
+                                            <i class="bx bx-dots-horizontal-rounded"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
                 </div>
             </div>
