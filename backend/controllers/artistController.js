@@ -1,5 +1,6 @@
 const { Artist, validate } = require("../models/artistModel");
 const { Song } = require("../models/songModel");
+const { User } = require("../models/userModel");
 
 // Get all artists        GET/api/artists
 exports.getAllArtists = async (req, res) => {
@@ -56,7 +57,7 @@ exports.deleteArtistByID = async (req, res) => {
 
 // Get all singers        GET/api/artists/singer/getAll
 exports.getAllSingers = async (req, res) => {
-    const singers = await Artist.find({isSinger: true});
+    const singers = await Artist.find({ isSinger: true });
     res.status(200).send({
         data: singers,
         message: "Get all singers successfully",
@@ -65,7 +66,42 @@ exports.getAllSingers = async (req, res) => {
 
 // Get all composers        GET/api/artists/composer/getAll
 exports.getAllComposers = async (req, res) => {
-    const composers = await Artist.find({isComposer: true});
+    const composers = await Artist.find({ isComposer: true });
+    res.status(200).send({
+        data: composers,
+        message: "Get all composers successfully",
+    });
+};
+
+// User follow/unfollow artist by id        PUT/api/artists/follow/:id
+exports.followArtistByID = async (req, res) => {
+    let resMessage = "";
+    const artist = await Artist.findById(req.params.id);
+    if (!artist) return res.status(400).send({ message: "Artist does not exist" });
+
+    const user = await User.findById(req.user._id);
+    const index = user.following.indexOf(artist._id);
+
+    if (index === -1) {
+        user.following.push(artist._id);
+        artist.followers++;
+        resMessage = "Added to your artists following";
+    } else {
+        user.following.splice(index, 1);
+        if (artist.followers > 0) {
+            artist.followers--;
+            resMessage = "Removed from your artists following";
+        } else resMessage = "Followers of artist not less than 0";
+    }
+
+    await user.save();
+    await artist.save();
+    res.status(200).send({ message: resMessage });
+};
+
+// Get all songs by artist        GET/api/artists/songs/getAll/:id
+exports.getAllSongsByArtist = async (req, res) => {
+    const songs = await Song.find({ isComposer: true });
     res.status(200).send({
         data: composers,
         message: "Get all composers successfully",
