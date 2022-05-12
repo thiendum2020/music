@@ -4,6 +4,7 @@
     padding: 20px;
     flex-grow: 1;
     max-width: 100%;
+    width: 100%;
 }
 
 .home-container__title {
@@ -33,17 +34,18 @@
 
 .home-container__list-items {
     display: flex;
+    width: 100%;
     margin-left: -16px;
     margin-right: -16px;
     margin: 16px -16px;
-    justify-content: space-between;
+    /* justify-content: space-between; */
 }
 
 .home-container__item-song,
 .home-container__item-playlist {
     cursor: pointer;
-    width: 250px;
-    height: 320px;
+    width: 220px;
+    height: 300px;
     border-radius: 5px;
     border: 1px solid transparent;
     margin: 0 16px;
@@ -61,8 +63,8 @@
     box-shadow: rgba(232, 110, 243, 0.3) 0px 10px 20px, rgba(232, 110, 243, 0.3) 0px 6px 6px;
 }
 .home-container__item-image {
-    width: 218px;
-    height: 218px;
+    width: 188px;
+    height: 188px;
     margin-top: 8px;
     position: relative;
 }
@@ -77,8 +79,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 218px;
-    height: 218px;
+    width: 188px;
+    height: 188px;
     align-items: center;
     justify-content: space-evenly;
     font-size: 60px;
@@ -101,7 +103,7 @@
 
 .home-container__item-content {
     margin-top: 10px;
-    margin-bottom: 5px;
+    margin-bottom: 8px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -109,10 +111,13 @@
     justify-content: space-between;
 }
 .home-container__item-content p {
+    margin-top: 4px;
+    margin-bottom: 4px;
     font-size: 16px;
     font-weight: 500;
 }
 .home-container__item-content span {
+    margin-top: 4px;
     font-size: 14px;
     line-height: 21px;
     display: block;
@@ -125,8 +130,8 @@
 
 .home-container__item-artist {
     cursor: pointer;
-    width: 250px;
-    height: 320px;
+    width: 220px;
+    height: 280px;
     border-radius: 5px;
     border: 1px solid transparent;
     margin: 0 16px;
@@ -139,8 +144,8 @@
     transition: all 0.2s linear;
 }
 .home-container__artist-image {
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     margin-top: 8px;
     position: relative;
 }
