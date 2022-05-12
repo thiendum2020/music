@@ -98,12 +98,3 @@ exports.followArtistByID = async (req, res) => {
     await artist.save();
     res.status(200).send({ message: resMessage });
 };
-
-// Get all songs by artist        GET/api/artists/songs/getAll/:id
-exports.getAllSongsByArtist = async (req, res) => {
-    const songs = await Song.find({ isComposer: true });
-    res.status(200).send({
-        data: composers,
-        message: "Get all composers successfully",
-    });
-};
