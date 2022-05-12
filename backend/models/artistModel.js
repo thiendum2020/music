@@ -10,6 +10,7 @@ const artistSchema = new mongoose.Schema({
 	date: { type: String, required: true },
     month: { type: String, required: true },
 	year: { type: String, required: true },
+    followers: {type: Number, required: true, default: 0},
     createdAt: { type: Date, default: Date.now },
 });
 
@@ -22,6 +23,7 @@ const validate = (artist) => {
 		date: Joi.string().required(),
         month: Joi.string().required(),
 		year: Joi.string().required(),
+		followers: Joi.number().required()
     });
     return schema.validate(artist);
 };
