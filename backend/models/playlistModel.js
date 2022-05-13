@@ -15,7 +15,6 @@ const playListSchema = new mongoose.Schema({
 const validate = (playList) => {
     const schema = Joi.object({
         title: Joi.string().required(),
-        user: Joi.string().required(),
         descriptions: Joi.string().allow(""),
         songs: Joi.array().items(Joi.string()),
         image: Joi.string().allow(""),
