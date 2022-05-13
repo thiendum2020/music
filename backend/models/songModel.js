@@ -13,6 +13,7 @@ const songSchema = new mongoose.Schema({
     duration: { type: String, required: true },
     genre: { type: String, required: true },
     published: { type: Boolean, default: true },
+    listens: { type: Number, required: true, default: 0 },
     createdBy: { type: ObjectId, ref: "User", required: true },
     createdAt: { type: Date, default: Date.now },
 });

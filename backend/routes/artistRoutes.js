@@ -10,7 +10,8 @@ const {
     updateArtistByID,
     deleteArtistByID,
     getAllSingers,
-    getAllComposers
+    getAllComposers,
+    followArtistByID,
 } = require("../controllers/artistController");
 
 router.route("/").get(auth, getAllArtists);
@@ -19,6 +20,7 @@ router.route("/composer/getAll").get(auth, getAllComposers);
 router.route("/:id").get([validateObjectId, auth], getArtistByID);
 router.route("/").post(admin, createArtist);
 router.route("/:id").put([validateObjectId, admin], updateArtistByID);
+router.route("/follow/:id").put([validateObjectId, auth], followArtistByID);
 router.route("/:id").delete([validateObjectId, admin], deleteArtistByID);
 
 module.exports = router;
