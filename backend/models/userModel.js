@@ -10,6 +10,7 @@ const userSchema = new mongoose.Schema({
     favourites: { type: [String], default: [] },
     playlists: { type: [String], default: [] },
     isAdmin: { type: Boolean, default: false },
+    following: {type: [String], default: []},
     image: { type: String },
     createdAt: { type: Date, default: Date.now },
 });
