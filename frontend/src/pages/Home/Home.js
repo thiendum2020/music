@@ -1,5 +1,6 @@
-import React from 'react'
-import Avatar from '../assets/img/avatar.jpg'
+import React from "react";
+import styles from "./home.module.css";
+
 export default function Home() {
     return (
         <div className="app">
@@ -166,13 +167,18 @@ export default function Home() {
                     <div className="home-container__header">
                         <div className="home-container__breadcrumb">
                             <ul>
-                                <li><a href="#">Home</a></li>
+                                <li>
+                                    <a href="#">Home</a>
+                                </li>
                                 {/* <li>Popular Songs</li> */}
                             </ul>
                         </div>
                         <div className="home-container__user-login">
                             <a className="user-login__image" href="#">
-                                <img src={Avatar} alt />
+                                <img
+                                    src="http://res.cloudinary.com/toryobuyall/image/upload/v1652595182/tv-music/image-upload/avatar.jpg"
+                                    alt
+                                />
                             </a>
                             <div>
                                 <p>
@@ -198,7 +204,10 @@ export default function Home() {
                             <div className="home-container__list-items">
                                 <div className="home-container__item-song">
                                     <div className="home-container__item-image">
-                                        <img src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg" alt />
+                                        <img
+                                            src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg"
+                                            alt
+                                        />
                                         <div className="home-container__song-action">
                                             <i className="bx bxs-heart" />
                                             {/* <i class='bx bx-heart'></i> */}
@@ -209,47 +218,69 @@ export default function Home() {
                                     <div className="home-container__item-content">
                                         <p>Nơi tình yêu bắt đầu</p>
                                         <a href="./artist-details.html">Bùi Anh Tuấn</a>
-                                        <span><i className="bx bxs-music" /> 9.999.999</span>
+                                        <span>
+                                            <i className="bx bxs-music" /> 9.999.999
+                                        </span>
                                     </div>
                                 </div>
                                 <div className="home-container__item-song">
                                     <div className="home-container__item-image">
-                                        <img src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg" alt />
+                                        <img
+                                            src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Nơi tình yêu bắt đầu</p>
                                         <span>Bùi Anh Tuấn</span>
-                                        <span><i className="bx bxs-music" /> 9.999.999</span>
+                                        <span>
+                                            <i className="bx bxs-music" /> 9.999.999
+                                        </span>
                                     </div>
                                 </div>
                                 <div className="home-container__item-song">
                                     <div className="home-container__item-image">
-                                        <img src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg" alt />
+                                        <img
+                                            src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Nơi tình yêu bắt đầu</p>
                                         <span>Bùi Anh Tuấn</span>
-                                        <span><i className="bx bxs-music" /> 9.999.999</span>
+                                        <span>
+                                            <i className="bx bxs-music" /> 9.999.999
+                                        </span>
                                     </div>
                                 </div>
                                 <div className="home-container__item-song">
                                     <div className="home-container__item-image">
-                                        <img src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg" alt />
+                                        <img
+                                            src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Nơi tình yêu bắt đầu</p>
                                         <span>Bùi Anh Tuấn</span>
-                                        <span><i className="bx bxs-music" /> 9.999.999</span>
+                                        <span>
+                                            <i className="bx bxs-music" /> 9.999.999
+                                        </span>
                                     </div>
                                 </div>
                                 <div className="home-container__item-song">
                                     <div className="home-container__item-image">
-                                        <img src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg" alt />
+                                        <img
+                                            src="https://i1.sndcdn.com/artworks-OKN13INxyuwe3LaX-Y1gbKg-t500x500.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Nơi tình yêu bắt đầu</p>
                                         <span>Bùi Anh Tuấn</span>
-                                        <span><i className="bx bxs-music" /> 9.999.999</span>
+                                        <span>
+                                            <i className="bx bxs-music" /> 9.999.999
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -264,17 +295,25 @@ export default function Home() {
                             <div className="home-container__list-items">
                                 <div className="home-container__item-playlist">
                                     <div className="home-container__item-image">
-                                        <img src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png" alt />
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Ronaldo</p>
-                                        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span>
+                                        <span>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.
+                                        </span>
                                     </div>
                                 </div>
                                 <div className="home-container__item-playlist">
                                     <div className="home-container__item-image">
-                                        <img src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png" alt />
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Ronaldo</p>
@@ -283,7 +322,10 @@ export default function Home() {
                                 </div>
                                 <div className="home-container__item-playlist">
                                     <div className="home-container__item-image">
-                                        <img src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png" alt />
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Ronaldo</p>
@@ -292,7 +334,10 @@ export default function Home() {
                                 </div>
                                 <div className="home-container__item-playlist">
                                     <div className="home-container__item-image">
-                                        <img src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png" alt />
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Ronaldo</p>
@@ -301,12 +346,17 @@ export default function Home() {
                                 </div>
                                 <div className="home-container__item-playlist">
                                     <div className="home-container__item-image">
-                                        <img src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png" alt />
+                                        <img
+                                            src="https://vcdn-thethao.vnecdn.net/2022/05/03/screenshot-2022-05-03-at-09-20-5156-4924-1651544469.png"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Ronaldo</p>
-                                        <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
-                                            corporis laudantium.</span>
+                                        <span>
+                                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. At perferendis
+                                            corporis laudantium.
+                                        </span>
                                     </div>
                                 </div>
                             </div>
@@ -321,7 +371,10 @@ export default function Home() {
                             <div className="home-container__list-items">
                                 <a href="./artist-details.html" className="home-container__item-artist">
                                     <div className="home-container__artist-image">
-                                        <img src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg" alt />
+                                        <img
+                                            src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Bùi Anh Tuấn</p>
@@ -331,7 +384,10 @@ export default function Home() {
                                 </a>
                                 <a href="./artist-details.html" className="home-container__item-artist">
                                     <div className="home-container__artist-image">
-                                        <img src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg" alt />
+                                        <img
+                                            src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Bùi Anh Tuấn</p>
@@ -341,7 +397,10 @@ export default function Home() {
                                 </a>
                                 <a href="./artist-details.html" className="home-container__item-artist">
                                     <div className="home-container__artist-image">
-                                        <img src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg" alt />
+                                        <img
+                                            src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Bùi Anh Tuấn</p>
@@ -351,7 +410,10 @@ export default function Home() {
                                 </a>
                                 <a href="./artist-details.html" className="home-container__item-artist">
                                     <div className="home-container__artist-image">
-                                        <img src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg" alt />
+                                        <img
+                                            src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Bùi Anh Tuấn</p>
@@ -361,7 +423,10 @@ export default function Home() {
                                 </a>
                                 <a href="./artist-details.html" className="home-container__item-artist">
                                     <div className="home-container__artist-image">
-                                        <img src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg" alt />
+                                        <img
+                                            src="https://vnn-imgs-a1.vgcloud.vn/znews-photo.zadn.vn/Uploaded/izhqv/2021_01_15/1_1.jpg"
+                                            alt
+                                        />
                                     </div>
                                     <div className="home-container__item-content">
                                         <p>Bùi Anh Tuấn</p>
@@ -380,7 +445,10 @@ export default function Home() {
                     {/* music-player left */}
                     <div className="music-player__left">
                         <div className="music-player__img">
-                            <img src="https://vnn-imgs-f.vgcloud.vn/2020/11/25/08/bui-anh-tuan-cover-love-song-tang-sinh-nhat-thay-ho-ngoc-ha.jpg" alt="THERE'S NO ONE AT ALL" />
+                            <img
+                                src="https://vnn-imgs-f.vgcloud.vn/2020/11/25/08/bui-anh-tuan-cover-love-song-tang-sinh-nhat-thay-ho-ngoc-ha.jpg"
+                                alt="THERE'S NO ONE AT ALL"
+                            />
                         </div>
                         <div className="music-player__details">
                             <p>Nơi tình yêu bắt đầu</p>
@@ -398,7 +466,15 @@ export default function Home() {
                                     </div>
                                     <div className="controll-top__action-download">
                                         <i>
-                                            <svg stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 16 16" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                            <svg
+                                                stroke="currentColor"
+                                                fill="currentColor"
+                                                strokeWidth={0}
+                                                viewBox="0 0 16 16"
+                                                height="1em"
+                                                width="1em"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
                                                 <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z" />
                                                 <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z" />
                                             </svg>
@@ -426,7 +502,15 @@ export default function Home() {
                                 {/* controll-top  right-section */}
                                 <div className="controll-top__right-section">
                                     <i>
-                                        <svg stroke="currentColor" fill="currentColor" strokeWidth={0} viewBox="0 0 448 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                        <svg
+                                            stroke="currentColor"
+                                            fill="currentColor"
+                                            strokeWidth={0}
+                                            viewBox="0 0 448 512"
+                                            height="1em"
+                                            width="1em"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
                                             <path d="M352 320c-22.608 0-43.387 7.819-59.79 20.895l-102.486-64.054a96.551 96.551 0 0 0 0-41.683l102.486-64.054C308.613 184.181 329.392 192 352 192c53.019 0 96-42.981 96-96S405.019 0 352 0s-96 42.981-96 96c0 7.158.79 14.13 2.276 20.841L155.79 180.895C139.387 167.819 118.608 160 96 160c-53.019 0-96 42.981-96 96s42.981 96 96 96c22.608 0 43.387-7.819 59.79-20.895l102.486 64.054A96.301 96.301 0 0 0 256 416c0 53.019 42.981 96 96 96s96-42.981 96-96-42.981-96-96-96z" />
                                         </svg>
                                     </i>
@@ -452,6 +536,5 @@ export default function Home() {
                 </div>
             </div>
         </div>
-
-    )
+    );
 }
