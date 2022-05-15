@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./list_playlist.module.css";
+import "./list_playlist.css";
 
 export default function ListPlaylist() {
     return <div>ListPlaylist</div>;

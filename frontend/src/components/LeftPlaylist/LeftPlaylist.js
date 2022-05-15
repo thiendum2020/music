@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./left_playlist.module.css";
+import "./left_playlist.css";
 
 export default function LeftPlaylist() {
     return <div>LeftPlaylist</div>;

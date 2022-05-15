@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from "./list_artist.module.css";
+import "./list_artist.css";
 
 export default function ListArtist() {
   return (
