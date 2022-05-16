@@ -1,5 +1,6 @@
 import React from 'react'
 import "../ListArtist/list_artist.css";
+import Check from '../../assets/img/check.png'
 
 const ArtistDetail = () => {
     return (
@@ -11,7 +12,7 @@ const ArtistDetail = () => {
                 <div className="artist-intro__text">
                     <div className="artist-intro__name">
                         <h1>Bùi Anh Tuấn</h1>
-                        <img src="./img/check.png" alt />
+                        <img src={Check} alt="Check" />
                     </div>
                     <span>(09/09/1991)</span>
                     <div className="artist-intro__follow">

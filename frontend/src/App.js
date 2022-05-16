@@ -6,7 +6,7 @@ import Sidebar from "./components/Sidebar/index.js";
 
 import Home from "./pages/Home/Home.js";
 import ListArtist from "./pages/ListArtist/ListArtist.js";
-import ArtistDetail from "./pages/ArtistDetail/ArtistDetail.js";
+import ArtistDetails from "./pages/ArtistDetail/ArtistDetails.js";
 import ListSong from "./pages/ListSong/ListSong.js";
 import LeftPlaylist from "./components/LeftPlaylist/LeftPlaylist.js";
 
@@ -27,7 +27,7 @@ function App() {
                                 <Route path="/" element={<Home />} />
                                 <Route path="/songs" element={<ListSong />} />
                                 <Route path="/artists" element={<ListArtist />} />
-                                <Route path="/artist/" element={<ArtistDetail />} />
+                                <Route path="/artist-details/:id" element={<ArtistDetails />} />
                                 <Route path="/playlists" element={<LeftPlaylist />} />
                             </Routes>
                         </div>
