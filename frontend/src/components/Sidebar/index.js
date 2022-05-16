@@ -4,6 +4,8 @@ import { NavLink } from "react-router-dom";
 import NavMenu from "../NavMenu/NavMenu.js";
 import LeftPlaylist from "../LeftPlaylist/LeftPlaylist.js";
 
+let activeClassName = "active"
+
 const SideBar = () => {
     return (
         <div className="left-container">
@@ -15,48 +17,58 @@ const SideBar = () => {
             <div className="left-container__menu">
                 <p>MENU</p>
                 <ul>
-                    <li className="left-container__home active">
-                        <NavLink to="/">
+                    <NavLink to="/" className={({ isActive }) =>
+                        isActive ? activeClassName : undefined
+                    }>
+                        <li className="left-container__home">
                             <i className="bx bx-home icon-none" />
                             <i className="bx bxs-home icon-active" />
                             <span>Home</span>
-                        </NavLink>
-                    </li>
-                    <li className="left-container__song">
-                        <NavLink to="/songs">
+                        </li>
+                    </NavLink>
+                    <NavLink to="/songs" className={({ isActive }) =>
+                        isActive ? activeClassName : undefined
+                    }>
+                        <li className="left-container__song">
                             <i className="bx bx-music icon-none" />
                             <i className="bx bxs-music icon-active" />
                             <span>Song</span>
-                        </NavLink>
-                    </li>
-                    <li className="left-container__artist">
-                        <NavLink to="/artists">
+                        </li>
+                    </NavLink>
+                    <NavLink to="/artists" className={({ isActive }) =>
+                        isActive ? activeClassName : undefined
+                    }>
+                        <li className="left-container__artist">
                             <i className="bx bx-microphone icon-none" />
                             <i className="bx bxs-microphone-alt icon-active" />
                             <span>Artist</span>
-                        </NavLink>
-                    </li>
+                        </li>
+                    </NavLink>
                     {/* <li class="left-container__albums">
                        <NavLink to="/">
                             <i class="bx bx-album icon-none"></i>
                             <i class="bx bxs-album icon-active"></i>
                             <span>Albums</span>
-                        </a>
+                        </NavLink>
                     </li> */}
-                    <li className="left-container__favourite">
-                        <NavLink to="/">
+                    <NavLink to="/favourite" className={({ isActive }) =>
+                        isActive ? activeClassName : undefined
+                    }>
+                        <li className="left-container__favourite" >
                             <i className="bx bx-heart icon-none" />
                             <i className="bx bxs-heart icon-active" />
                             <span>Favorite Songs</span>
-                        </NavLink>
-                    </li>
-                    <li className="left-container__search">
-                        <NavLink to="/">
+                        </li>
+                    </NavLink>
+                    <NavLink to="/search" className={({ isActive }) =>
+                        isActive ? activeClassName : undefined
+                    }>
+                        <li className="left-container__search">
                             <i className="bx bx-search icon-none" />
                             <i className="bx bxs-search icon-active" />
                             <span>Search</span>
-                        </NavLink>
-                    </li>
+                        </li>
+                    </NavLink>
                 </ul>
             </div>
             {/* playlist */}

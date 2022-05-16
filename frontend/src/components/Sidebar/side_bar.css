@@ -1,28 +1,3 @@
-.left-container {
-    min-width: 16%;
-    background: rgba(34, 34, 34, 0.6);
-    backdrop-filter: blur(10px);
-    padding: 22px 20px;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.left-container__logo {
-    display: flex;
-    align-items: center;
-    color: #f1f1f1;
-}
-
-.left-container__menu {
-    margin: 25px 0;
-}
-
-.left-container__menu p {
-    color: #848484;
-    font-size: 12px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-}
 
 .left-container__menu ul {
     width: 100%;
@@ -30,7 +5,6 @@
 }
 
 .left-container__menu ul li {
-    list-style: none;
     margin: 5px 0;
     width: 100%;
     padding: 5px 0px;
@@ -38,26 +12,33 @@
     display: flex;
 }
 
-.left-container__menu ul li a {
-    text-decoration: none;
+.left-container__menu ul a {
     color: #848484;
     display: flex;
     align-items: center;
     font-size: 16px;
 }
 
-.left-container__menu ul li a i {
+.left-container__menu ul a li i {
     font-size: 18px;
     margin-right: 15px;
 }
 
-.left-container__menu ul li:hover a,
-.left-container__menu ul li.active a {
+.left-container__menu ul a:hover{
     color: #f1f1f1;
     transition: 0.3s;
 }
 
-.left-container__menu ul li::before {
+.left-container__menu ul a.active{
+    color: #f1f1f1;
+    transition: 0.3s;
+}
+.left-container__menu ul a.active li::before{
+    width: 5px;
+    transition: width 0.5s;
+}
+
+.left-container__menu ul a li::before {
     position: absolute;
     content: "";
     top: 0;
@@ -68,8 +49,8 @@
     border-radius: 5px;
 }
 
-.left-container__menu ul li:hover::before,
-.left-container__menu ul li.active::before {
+.left-container__menu ul a li:hover::before,
+.left-container__menu ul a li.active::before {
     width: 5px;
     transition: width 0.5s;
 }
@@ -83,11 +64,11 @@
     display: none;
 }
 
-.left-container__menu li.active .icon-none {
+.left-container__menu a.active .icon-none {
     display: none;
 }
 
-.left-container__menu li.active .icon-active {
+.left-container__menu a.active .icon-active {
     display: inline;
 }
 
