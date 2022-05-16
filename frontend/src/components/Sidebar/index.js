@@ -17,27 +17,21 @@ const SideBar = () => {
             <div className="left-container__menu">
                 <p>MENU</p>
                 <ul>
-                    <NavLink to="/" className={({ isActive }) =>
-                        isActive ? activeClassName : undefined
-                    }>
+                    <NavLink to="/" >
                         <li className="left-container__home">
                             <i className="bx bx-home icon-none" />
                             <i className="bx bxs-home icon-active" />
                             <span>Home</span>
                         </li>
                     </NavLink>
-                    <NavLink to="/songs" className={({ isActive }) =>
-                        isActive ? activeClassName : undefined
-                    }>
+                    <NavLink to="/songs" >
                         <li className="left-container__song">
                             <i className="bx bx-music icon-none" />
                             <i className="bx bxs-music icon-active" />
                             <span>Song</span>
                         </li>
                     </NavLink>
-                    <NavLink to="/artists" className={({ isActive }) =>
-                        isActive ? activeClassName : undefined
-                    }>
+                    <NavLink to="/artists" >
                         <li className="left-container__artist">
                             <i className="bx bx-microphone icon-none" />
                             <i className="bx bxs-microphone-alt icon-active" />
@@ -51,18 +45,14 @@ const SideBar = () => {
                             <span>Albums</span>
                         </NavLink>
                     </li> */}
-                    <NavLink to="/favourite" className={({ isActive }) =>
-                        isActive ? activeClassName : undefined
-                    }>
+                    <NavLink to="/favourite" >
                         <li className="left-container__favourite" >
                             <i className="bx bx-heart icon-none" />
                             <i className="bx bxs-heart icon-active" />
                             <span>Favorite Songs</span>
                         </li>
                     </NavLink>
-                    <NavLink to="/search" className={({ isActive }) =>
-                        isActive ? activeClassName : undefined
-                    }>
+                    <NavLink to="/search" >
                         <li className="left-container__search">
                             <i className="bx bx-search icon-none" />
                             <i className="bx bxs-search icon-active" />
