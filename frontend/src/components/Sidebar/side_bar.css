@@ -2,7 +2,7 @@
     min-width: 16%;
     background: rgba(34, 34, 34, 0.6);
     backdrop-filter: blur(10px);
-    padding: 22px 20px;
+    padding: 20px 20px;
     overflow: hidden;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
@@ -99,7 +99,7 @@
 .left-container__playlist {
     /* margin: 15px 0px; */
     cursor: pointer;
-    height: calc(100% - 278.8px);
+    height: calc(100% - 308.8px);
 }
 
 .left-container__playlist-header {

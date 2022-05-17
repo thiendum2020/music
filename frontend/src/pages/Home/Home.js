@@ -6,7 +6,6 @@ export default function Home() {
     return (
         <>
             {/* home container center */}
-
             <div className="home-container__popular-songs">
                 <div className="home-container__title">
                     <p>Popular songs</p>
