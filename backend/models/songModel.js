@@ -27,7 +27,7 @@ const validate = (song) => {
         composer: Joi.string().required(),
         image: Joi.string().required(),
         duration: Joi.number().required(),
-        genre: Joi.number().required(),
+        genre: Joi.string().required()
     });
     return schema.validate(song);
 };

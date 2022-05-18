@@ -19,11 +19,11 @@ const validate = (artist) => {
         name: Joi.string().required(),
         gender: Joi.string().valid("male", "female").required(),
         image: Joi.string().required(),
-        genre: Joi.number().required(),
 		date: Joi.string().required(),
         month: Joi.string().required(),
 		year: Joi.string().required(),
-		followers: Joi.number().required()
+		isSinger: Joi.boolean().required(),
+		isComposer: Joi.boolean().required()
     });
     return schema.validate(artist);
 };

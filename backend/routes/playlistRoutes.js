@@ -14,9 +14,18 @@ const {
     removeSongFromPlaylist,
 } = require("../controllers/playlistController");
 
-router.route("/").get(auth, getAllPlaylists);
-router.route("/user-playlist/getAll").get(auth, getAllPlaylistsByUserID);
-router.route("/:id").get([validateObjectId, auth], getPlaylistById);
+// router.route("/").get(auth, getAllPlaylists);
+// router.route("/user-playlist/getAll").get(auth, getAllPlaylistsByUserID);
+// router.route("/:id").get([validateObjectId, auth], getPlaylistById);
+// router.route("/").post(auth, createPlaylist);
+// router.route("/:id").put([validateObjectId, admin], updatePlaylistByID);
+// router.route("/:id").delete([validateObjectId, admin], deletePlaylistByID);
+// router.route("/song/add").put(auth, addSongToPlaylist);
+// router.route("/song/remove").put(auth, removeSongFromPlaylist);
+
+router.route("/").get(getAllPlaylists);
+router.route("/user-playlist/getAll").get(getAllPlaylistsByUserID);
+router.route("/:id").get(validateObjectId, getPlaylistById);
 router.route("/").post(auth, createPlaylist);
 router.route("/:id").put([validateObjectId, admin], updatePlaylistByID);
 router.route("/:id").delete([validateObjectId, admin], deletePlaylistByID);

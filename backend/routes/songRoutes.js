@@ -14,13 +14,22 @@ const {
     deleteSongByID,
 } = require("../controllers/songController");
 
-router.route("/published/get").get(auth, getAllSongsPublished);
+// router.route("/published/get").get(auth, getAllSongsPublished);
+// router.route("/by-admin/get").get(admin, getAllSongsByAdmin);
+// router.route("/:id").get([validateObjectId, auth], getSongByID);
+// router.route("/").post(admin, createSong);
+// router.route("/:id").put([validateObjectId, admin], updateSongByID);
+// router.route("/:id").delete([validateObjectId, admin], deleteSongByID);
+// router.route("/favourite/get").get(auth, getFavouriteSongs);
+// router.route("/favourite/:id").put(authfavoriteSong);
+
+router.route("/published/get").get(getAllSongsPublished);
 router.route("/by-admin/get").get(admin, getAllSongsByAdmin);
-router.route("/:id").get([validateObjectId, auth], getSongByID);
+router.route("/:id").get(validateObjectId, getSongByID);
 router.route("/").post(admin, createSong);
 router.route("/:id").put([validateObjectId, admin], updateSongByID);
 router.route("/:id").delete([validateObjectId, admin], deleteSongByID);
-router.route("/favourite/get").get(auth, getFavouriteSongs);
-router.route("/favourite/:id").put([auth, admin], favoriteSong);
+router.route("/favourite/get").get(getFavouriteSongs);
+router.route("/favourite/:id").put(auth, favoriteSong);
 
 module.exports = router;

@@ -5,8 +5,8 @@ const { Song, validate } = require("../models/songModel");
 exports.createSong = async (req, res) => {
     const { error } = validate(req.body);
     if (error) return res.status(400).send({ message: error.details[0].message });
+    const song = await Song({ ...req.body, createdBy: req.user._id }).save();
 
-    const song = await Song(req.body).save();
     res.status(201).send({
         data: song,
         message: "The song has been created successfully",
