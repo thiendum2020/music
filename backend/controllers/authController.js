@@ -1,5 +1,6 @@
 const { User, validate } = require("../models/userModel");
 const bcrypt = require("bcrypt");
+const sendToken = require('../utils/jwtToken')
 
 //Login   POST/api/login
 exports.login = async (req, res) => {
@@ -10,7 +11,8 @@ exports.login = async (req, res) => {
     if (!validPassword) return res.status(400).send({ message: "Invalid email or password!" });
 
     const token = user.generateAuthToken();
-    res.status(200).send({ data: token, message: "Logging in please wait..." });
+    sendToken(user, 200, res)
+    // res.status(200).send({ data: token, message: "Logging in please wait..." });
 };
 
 //Register   POST/api/register
