@@ -19,7 +19,7 @@ const preloadedState = {
 
 const store = configureStore({
     reducer: rootReducer,
-    preloadedState,
+    // preloadedState,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 })
 
