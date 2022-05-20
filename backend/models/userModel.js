@@ -22,6 +22,13 @@ userSchema.methods.generateAuthToken = function () {
     return token;
 };
 
+//Return JWT token
+userSchema.methods.getJwtToken = function () {
+    return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
+        expiresIn: process.env.JWT_EXPIRES_TIME
+    })
+}
+
 const validate = (user) => {
     const schema = Joi.object({
         name: Joi.string().min(3).max(15).required(),
