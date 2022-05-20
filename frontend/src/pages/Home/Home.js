@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import "./home.css";
-import Sidebar from "../../components/Sidebar/index.js";
+import {
+    getAllSongsPublished
+} from "../../actions/songActions";
 
-export default function Home() {
+const Home = () => {
+    const dispatch = useDispatch();
+    const { publishedSongs } = useSelector((state) => state.publishedSongsReducer);
+
+    useEffect(() => {
+        dispatch(getAllSongsPublished());
+    }, [dispatch]);
+    console.log(publishedSongs);
+    
     return (
         <>
             {/* home container center */}
@@ -236,3 +247,4 @@ export default function Home() {
         </>
     );
 }
+export default Home;
