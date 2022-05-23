@@ -2,9 +2,9 @@ const router = require("express").Router();
 const { Song } = require("../models/songModel");
 const { PlayList } = require("../models/playlistModel");
 const { Artist } = require("../models/artistModel");
-const auth = require("../middleware/auth");
+const { isAuthenticated, isAdmin } = require('../middleware/auth')
 
-router.get("/", auth, async (req, res) => {
+router.get("/", isAuthenticated, async (req, res) => {
     const search = req.query.search;
     if (search !== "") {
         const songs = await Song.find({

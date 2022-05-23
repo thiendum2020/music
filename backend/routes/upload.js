@@ -3,9 +3,10 @@ const cloudinary = require("cloudinary");
 const multer = require("multer");
 const fs = require("fs");
 const auth = require("../middleware/auth");
+const { isAuthenticated, isAdmin } = require('../middleware/auth')
 
 //Upload audio
-router.post("/audio/upload", auth, async (req, res) => {
+router.post("/audio/upload", isAuthenticated, async (req, res) => {
     try {
         if (!req.files || Object.keys(req.files).length === 0) {
             return res.status(400).json({ msg: "No files were uploaded!" });
@@ -76,7 +77,7 @@ router.post("/audio/upload", auth, async (req, res) => {
 });
 
 //Upload image
-router.post("/image/upload", auth, async (req, res) => {
+router.post("/image/upload", isAuthenticated, async (req, res) => {
     try {
         if (!req.files || Object.keys(req.files).length === 0) {
             return res.status(400).json({ msg: "No files were uploaded!" });

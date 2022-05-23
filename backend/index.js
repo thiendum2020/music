@@ -4,6 +4,7 @@ require("express-async-errors");
 const express = require("express");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 const fileUpload = require("express-fileupload");
 const cloudinary = require("cloudinary");
 
@@ -18,16 +19,17 @@ const searchRoutes = require("./routes/searchRoutes");
 const upload = require("./routes/upload");
 const app = express();
 
+app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
 app.use(
     fileUpload({
         useTempFiles: true,
     }),
 );
+app.use(express.json());
 
 connection();
-app.use(cors());
-app.use(express.json());
 
 app.use("/api", authRoutes);
 app.use("/api/users", userRoutes);

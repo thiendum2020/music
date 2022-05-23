@@ -1,5 +1,4 @@
 const { User, validate } = require("../models/userModel");
-// const bcrypt = require("bcrypt");
 
 // Get all users        GET/api/users
 exports.getAllUsers = async (req, res) => {
