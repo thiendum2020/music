@@ -14,11 +14,9 @@ exports.isAuthenticated = catchAsyncErrors(async (req, res, next) => {
 });
 
 //Handling users roles
-exports.isAdmin = () => {
-    return (req, res, next) => {
-        if (!req.user.isAdmin) {
-            return next(new ErrorHandler(`Role's user is not allowed to access this resource`, 403));
-        }
-        next();
-    };
-};
+exports.isAdmin = catchAsyncErrors(async (req, res, next) => {
+    if (!req.user.isAdmin) {
+        return next(new ErrorHandler(`Role's user is not allowed to access this resource`, 403));
+    }
+    next();
+});

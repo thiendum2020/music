@@ -1,10 +1,12 @@
 import { configureStore, combineReducers } from '@reduxjs/toolkit'
 import {publishedSongsReducer} from './reducers/songReducers.js'
 import logger from 'redux-logger'
+import {authReducer} from './reducers/authReducers.js'
 
 
 const rootReducer = combineReducers({
-    publishedSongsReducer
+    publishedSongsReducer,
+    authReducer
 });
 
 // lấy user login tử localstorage 
@@ -19,7 +21,7 @@ const preloadedState = {
 
 const store = configureStore({
     reducer: rootReducer,
-    // preloadedState,
+    preloadedState,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger)
 })
 
