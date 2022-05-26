@@ -19,9 +19,14 @@ const searchRoutes = require("./routes/searchRoutes");
 const upload = require("./routes/upload");
 const app = express();
 
+const corsOptions = {
+    origin: 'http://localhost:3000', //frontend url
+    credentials: true
+}
+
 app.use(cookieParser());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(
     fileUpload({
         useTempFiles: true,
