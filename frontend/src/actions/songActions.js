@@ -11,12 +11,10 @@ export const getAllSongsPublished = () => async (dispatch) => {
     try {
         dispatch({ type: GET_ALL_SONGS_PUBLISHED_REQUEST });
         const config = {
-            headers: {
-                'Content-Type': 'application/json'
-            }
+            withCredentials: true
         }
 
-        const { data } = await axios.get(url + "/songs/published/get")
+        const { data } = await axios.get(url + "/songs/published/get", config)
 
         dispatch({
             type: GET_ALL_SONGS_PUBLISHED_SUCCESS,
