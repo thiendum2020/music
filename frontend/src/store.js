@@ -24,7 +24,7 @@ const sagaMiddleware = createSagaMiddleware();
 const store = configureStore({
     reducer: rootReducer,
     preloadedState,
-    middleware: (getDefaultMiddleware) => [...getDefaultMiddleware().concat(logger), sagaMiddleware],
+    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
 });
 
 export default store;
