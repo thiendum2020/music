@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Route, Routes, useLocation, Redirect } from "react-router-dom";
 import PlayerFooter from "./components/PlayerFooter/PlayerFooter.js";
 import Header from "./components/Header/Header.js";
@@ -21,12 +21,9 @@ const App = () => {
         <>
             <div className="app">
                 <div className="background"></div>
-                {/* main content */}
                 <div className="main-content">
-                    {/* SideBar Left */}
                     <Sidebar />
                     <div className="home-container">
-                        {/* Header */}
                         <Header />
                         <div className="home-container__center">
                             <Routes>
@@ -75,7 +72,6 @@ const App = () => {
                         </div>
                     </div>
                 </div>
-                {/* footer content */}
                 <PlayerFooter />
             </div>
         </>
