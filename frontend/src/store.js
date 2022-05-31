@@ -1,8 +1,8 @@
 import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import { publishedSongsReducer } from "./reducers/songReducers.js";
-import logger from "redux-logger";
 import { authReducer } from "./reducers/authReducers.js";
 import createSagaMiddleware from "redux-saga";
+import rootSaga from "./saga/rootSaga"
 
 const rootReducer = combineReducers({
     publishedSongsReducer,
@@ -26,6 +26,8 @@ const store = configureStore({
     preloadedState,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(sagaMiddleware),
 });
+
+sagaMiddleware.run(rootSaga);
 
 export default store;
 

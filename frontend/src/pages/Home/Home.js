@@ -12,7 +12,6 @@ const Home = () => {
     useEffect(() => {
         dispatch(getAllSongsPublished());
     }, [dispatch]);
-    console.log(publishedSongs);
     
     return (
         <>
