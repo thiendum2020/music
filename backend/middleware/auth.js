@@ -1,31 +1,23 @@
 const jwt = require("jsonwebtoken");
+const catchAsyncErrors = require("./catchAsyncErrors");
+const ErrorHandler = require("../utils/errorHandler");
+const { User } = require("../models/userModel");
 
-exports.isAuthenticated = async (req, res, next) => {
-    const token = req.header("x-auth-token");
-    if (!token) return res.status(400).send({ message: "Access denied, no token provided." });
+exports.isAuthenticated = catchAsyncErrors(async (req, res, next) => {
+    console.log(req);
+    const { token } = req.cookies;
+    // if (!token) {
+    //     return next(new ErrorHandler("Login first to access this resource", 401));
+    // }
+    // const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    // req.user = await User.findById(decoded.id);
+    next();
+});
 
-    jwt.verify(token, process.env.JWTPRIVATEKEY, (err, validToken) => {
-        if (err) {
-            return res.status(400).send({ message: "Invalid token" });
-        } else {
-            req.user = validToken;
-            next();
-        }
-    });
-};
-
-exports.isAdmin = async (req, res, next) => {
-    const token = req.header("x-auth-token");
-    if (!token) return res.status(400).send("Access denied, no token provided");
-
-    jwt.verify(token, process.env.JWTPRIVATEKEY, (err, validToken) => {
-        if (err) {
-            return res.status(400).send({ message: "Invalid token" });
-        } else {
-            if (!validToken.isAdmin) return res.status(403).send({ message: "You don't have access to this content" });
-
-            req.user = validToken;
-            next();
-        }
-    });
-};
+//Handling users roles
+exports.isAdmin = catchAsyncErrors(async (req, res, next) => {
+    if (!req.user.isAdmin) {
+        return next(new ErrorHandler(`Role's user is not allowed to access this resource`, 403));
+    }
+    next();
+});

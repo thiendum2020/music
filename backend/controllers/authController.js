@@ -1,5 +1,6 @@
 const { User, validate } = require("../models/userModel");
 const bcrypt = require("bcrypt");
+const sendToken = require("../utils/jwtToken");
 
 //Login   POST/api/login
 exports.login = async (req, res) => {
@@ -9,8 +10,9 @@ exports.login = async (req, res) => {
     const validPassword = await bcrypt.compare(req.body.password, user.password);
     if (!validPassword) return res.status(400).send({ message: "Invalid email or password!" });
 
-    const token = user.generateAuthToken();
-    res.status(200).send({ data: { token, user }, message: "Logged in successfully!" });
+    // const token = user.generateAuthToken();
+    sendToken(user, 200, res);
+    // res.status(200).send({ data: token, message: "Logging in please wait..." });
 };
 
 //Register   POST/api/register
@@ -34,10 +36,10 @@ exports.register = async (req, res) => {
 };
 
 //Logout   GET/api/logout
-// exports.logout = async (req, res, next) => {
-//     res.cookie("token", null, {
-//         expires: new Date(Date.now()),
-//         httpOnly: true,
-//     });
-//     res.status(200).send({ message: "Logged out successfully" });
-// };
+exports.logout = async (req, res, next) => {
+    res.cookie("token", null, {
+        expires: new Date(Date.now()),
+        httpOnly: true,
+    });
+    res.status(200).send({ message: "Logged out successfully" });
+};
